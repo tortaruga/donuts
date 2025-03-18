@@ -1,3 +1,5 @@
+/* general */
+
 :root {
     --pink: #ff0a8d;
     --orange: #FFC933;
@@ -25,7 +27,7 @@ body {
     color: var(--brown);
 }
 
-main {
+main, footer {
     max-width: 1600px;
     margin: auto;
     background-color: var(--white);
@@ -39,6 +41,32 @@ ul {
     margin: 0;
 }
 
+
+li {
+    padding-left: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: barriecito;
+}
+
+.highlight {
+    font-weight: 600;
+    color: var(--pink);
+}
+
+.highlight.orange {
+    color: var(--orange);
+}
+
+*::selection {
+    background-color: var(--brown);
+    color: var(--pink);
+}
+
+/* nav */
+
 nav {
     padding: 2rem;
     background-color: #281801;
@@ -50,13 +78,9 @@ nav ul {
     text-align: center;
 }
 
-li {
-    padding-left: 0;
-}
-
 nav li {
     background-color: var(--pink);
-    color:#FFC933;
+    color:var(--orange);
     padding: .4rem 1rem;
     border-radius: 1rem;
     font-weight: 700;
@@ -71,6 +95,8 @@ nav li:hover {
     transform: scale(1.1);
 }
 
+/* hero */
+
 .hero {
     display: flex;
     padding: 2rem;
@@ -83,11 +109,11 @@ nav li:hover {
 .hero .img-wrapper {
     width: 100%;
     aspect-ratio: 1;
-    background-image: url(./hero.jpg);
+    background-image: url(./images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    mask-image: url(./mask.svg);
+    mask-image: url(./images/mask.svg);
     mask-repeat: no-repeat;
     mask-position: center;
     max-width: 350px;
@@ -110,14 +136,6 @@ nav li:hover {
     font-weight: 500;
 }
 
-h1 {
-
-    font-family: oi;
-    font-weight: normal;
-    font-family: barriecito;
-    /* font-family: modak; */
-}
-
 .hero .highlight {
     text-align: center;
     color: var(--pink);
@@ -134,8 +152,10 @@ h1 {
     border-bottom: .15rem solid var(--pink);
 }
 
+/* about */
+
 #about {
-    background-image: url(./about.jpg);
+    background-image: url(./images/about.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,14 +177,7 @@ h1 {
     padding: 1rem 3rem;
 }
 
-.highlight {
-    font-weight: 600;
-    color: var(--pink);
-}
-
-.highlight.orange {
-    color: var(--orange);
-}
+/* find us */
 
 #find-us {
     display: flex;
@@ -203,14 +216,13 @@ h1 {
 
 #find-us .img {
     aspect-ratio: 1.5;
-    background-image: url(./find-us.jpg);
+    background-image: url(./images/find-us.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
     flex-basis: 350px;
     flex-grow: 1;
-    /* box-shadow: .5rem .3rem 0 var(--pink); */
 }
 
 #find-us ul {
@@ -234,6 +246,8 @@ i:hover {
     transform: scale(1.2);
 }
 
+/* threat */
+
 #threat {
     min-height: 100vh;
     background-color: black;
@@ -250,10 +264,7 @@ i:hover {
     color: var(--pink);
 }
 
-*::selection {
-    background-color: var(--brown);
-    color: var(--pink);
-}
+/* footer */
 
 footer {
     text-align: center;
@@ -262,11 +273,11 @@ footer {
     font-weight: 500;
     letter-spacing: .05rem;
     background-color: var(--pink);
-    color: #FDF8ED;
+    color: var(--white);
 }
 
 footer a {
-    color: #FFC933;
+    color: var(--orange);
 }
 
 footer a:hover {
